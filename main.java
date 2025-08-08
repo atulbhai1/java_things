@@ -1,18 +1,22 @@
 public class main {
-    public static void main(String[] args){
+    public static void main(String a[]){
 
-        String day = "Satundy";
+        for(int b=1;b<=7;b++)
+        {
+            for(int h=0;h<=23;h++) {
+                int hour = 0;
+                if (h>12){
+                    hour = h%12;
+                }
+                else{
+                    hour = h;
+                }
+                System.out.println("Day:"+ b);
+                System.out.println("Hour:"+ hour);
+                System.out.println();
+            }
+        }
 
-        day = switch(day) {
-            case "Monday" -> "Sunday";
-
-            case "Saturday", "Sunday" -> "Alarm set to 6";
-
-            default -> "Alarm set to 7";
-
-        };
-
-        System.out.println(day);
 
 
 
