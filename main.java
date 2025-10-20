@@ -1,24 +1,28 @@
+class Calculator {
+    int c = 54;
+    public int add(int a, int b){
+        return (a+b);
+    }
+    public int sub(int a, int b){
+        return (a-b);
+    }
+    public int absolute_sub(int a, int b){
+        if (a>b) {
+            return (a-b);
+        }
+        else {
+            return (b-a);
+        }
+    }
+}
+
 public class main {
     public static void main(String a[]){
 
-        for(int b=1;b<=7;b++)
-        {
-            for(int h=0;h<=23;h++) {
-                int hour = 0;
-                if (h>12){
-                    hour = h%12;
-                }
-                else{
-                    hour = h;
-                }
-                System.out.println("Day:"+ b);
-                System.out.println("Hour:"+ hour);
-                System.out.println();
-            }
-        }
+        Calculator calc = new Calculator();
 
-
-
+        int result = calc.absolute_sub(2, 3);
+        System.out.println(result);
 
     }
 }
