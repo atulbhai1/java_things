@@ -1,28 +1,18 @@
-class Calculator {
-    int c = 54;
-    public int add(int a, int b){
-        return (a+b);
+class Computer {
+    public void playMusic(){
+        System.out.println("MOOSIC");
     }
-    public int sub(int a, int b){
-        return (a-b);
-    }
-    public int absolute_sub(int a, int b){
-        if (a>b) {
-            return (a-b);
-        }
-        else {
-            return (b-a);
-        }
+    public String sendText(String message, long phoneNumber) {
+        System.out.println("Sending Text: "+message+" to "+phoneNumber);
+        return (String) ("Successfully sent message to "+ phoneNumber);
     }
 }
 
 public class main {
     public static void main(String a[]){
-
-        Calculator calc = new Calculator();
-
-        int result = calc.absolute_sub(2, 3);
-        System.out.println(result);
-
+        long myNum = 999999999;
+        Computer comp = new Computer();
+        System.out.println(comp.sendText("Hi", myNum));
     }
+
 }
