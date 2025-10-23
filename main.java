@@ -12,7 +12,7 @@ public class main {
     public static void main(String a[]){
         long myNum = 999999999;
         Computer comp = new Computer();
-        System.out.println(comp.sendText("Hi", myNum));
+        System.out.println((new Computer()).sendText("Hi", myNum));
     }
 
 }
