@@ -1,27 +1,31 @@
+class Student{
+    int rollin;
+    String name;
+    int mark;
+}
+
 public class main {
     public static void main(String a[]){
-        int nums[][] = new int[4][];
-
-        nums[0] = new int[3];
-        nums[1] = new int[2];
-        nums[2] = new int[4];
-        nums[3] = new int[5];
-        System.out.println();
-        for (int i=0; i<nums.length; i++){
-            for (int j=0; j<nums[i].length; j++){
-                int temp = (int)(Math.random()*100);
-                nums[i][j] = temp;
-                //System.out.print(nums[i][j]+" ");
-            }
-            //System.out.println();
+        Student s1 = new Student();
+        s1.name = "Atul";
+        s1.mark = 88;
+        s1.rollin = 1;
+        Student s2 = new Student();
+        s2.name = "Bart";
+        s2.mark = 78;
+        s2.rollin = 2;
+        Student s3 = new Student();
+        s3.name = "Harsh";
+        s3.mark = 98;
+        s3.rollin = 3;
+        Student students[] = new Student[3];
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+        for (Student student_temp: students){
+            System.out.println(student_temp.rollin+". "+student_temp.name+":"+student_temp.mark);
         }
 
-        for (int n[] : nums){
-            for (int m: n){
-                System.out.print(m+" ");
-            }
-            System.out.println();
-        }
     }
 
 }
