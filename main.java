@@ -6,7 +6,14 @@ public class main {
             for (int j=0; j<=1; j++){
                 int temp = (int)(Math.random()*100);
                 nums[i][j] = temp;
-                System.out.print(nums[i][j]+" ");
+                //System.out.print(nums[i][j]+" ");
+            }
+            //System.out.println();
+        }
+
+        for (int n[] : nums){
+            for (int m: n){
+                System.out.print(m+" ");
             }
             System.out.println();
         }
