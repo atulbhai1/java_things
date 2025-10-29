@@ -6,6 +6,9 @@ class Mobile {
     public void show(){
         System.out.println(brand+" : "+price+" : "+name);
     }
+    public static void show1(Mobile obj){
+        System.out.println(obj.brand+" : "+obj.price+" : "+name);
+    }
 }
 
 public class main {
@@ -21,9 +24,10 @@ public class main {
         mobile2.name = "Phone";
 
         Mobile.name = "Smart Phone";
-        mobile1.show();
-        mobile2.show();
-        System.out.println(Mobile.name);
+        //mobile1.show();
+        //mobile2.show();
+        //System.out.println(Mobile.name);
+        Mobile.show1(mobile1);
     }
 
 }
