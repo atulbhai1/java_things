@@ -1,6 +1,15 @@
 class Human {
 
     int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     String name;
 
     private String first_pets_name = "bill";
@@ -23,7 +32,7 @@ public class main {
         obj.age = 15;
         obj.name = "Atul";
         //obj.first_pets_name = "h;
-        System.out.println(obj.whats_my_first_pets_name("dog"));
+        System.out.println(obj.whats_my_first_pets_name("Bank"));
 
 
     }
