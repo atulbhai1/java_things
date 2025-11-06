@@ -1,35 +1,29 @@
-class Mobile {
-    String brand;
-    int price;
-    String network;
-    static String name;
-    static {
-        name = "Phone";
-        System.out.println("In STATIC");
-    }
-    public Mobile(){
-        brand = "";
-        price = 200;
-    }
-    public void show(){
-        System.out.println(brand+" : "+price+" : "+name);
+class Human {
+
+    int age;
+    String name;
+
+    private String first_pets_name = "bill";
+
+    public String whats_my_first_pets_name(String source){
+        if (source=="Bank"||source=="Institution"){
+            return first_pets_name;
+        } else {
+            return "NO!!!";
+        }
     }
 
 }
 
 public class main {
-    public static void main(String a[]) throws ClassNotFoundException
+    public static void main(String a[])
     {
-        //Mobile mobile1 = new Mobile();
-        //mobile1.brand = "Apple";
-        //mobile1.price = 1500;
-        //mobile1.name = "SmartPhone";
 
-        //Mobile mobile2 = new Mobile();
-
-        //mobile1.show();
-        //mobile2.show();
-        Class.forName("Mobile");
+        Human obj = new Human();
+        obj.age = 15;
+        obj.name = "Atul";
+        //obj.first_pets_name = "h;
+        System.out.println(obj.whats_my_first_pets_name("dog"));
 
 
     }
