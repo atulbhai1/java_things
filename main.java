@@ -1,25 +1,18 @@
 class Human {
 
     int age;
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     String name;
+    public Human(){
+        age = 12;
+        name = "bob";
+    }
+    public Human(int a, String n){
+        age = a;
+        name = n;
+    }
 
-    private String first_pets_name = "bill";
-
-    public String whats_my_first_pets_name(String source){
-        if (source=="Bank"||source=="Institution"){
-            return first_pets_name;
-        } else {
-            return "NO!!!";
-        }
+    public void display(){
+        System.out.println(age+":"+name);
     }
 
 }
@@ -29,11 +22,9 @@ public class main {
     {
 
         Human obj = new Human();
-        obj.age = 15;
-        obj.name = "Atul";
-        //obj.first_pets_name = "h;
-        System.out.println(obj.whats_my_first_pets_name("Bank"));
-
+        Human obj2 = new Human(18, "atul");
+        obj.display();
+        obj2.display();
 
     }
 
