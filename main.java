@@ -1,23 +1,25 @@
-abstract class Car{
-    public abstract void drive();
-    public void playMusic(){
-        System.out.println("Playing music");
+class A{
+    int age;
+
+    public void show(){
+        System.out.println("Showing");
     }
 
-}
-
-class WagonR extends Car{
-    public void drive(){
-        System.out.println("Driving WagonR");
+    static class B{
+        public void config(){
+            System.out.println("in config");
+        }
     }
 }
+
+
 public class main {
     public static void main(String a[])
     {
-        Car obj = new WagonR();
-        obj.drive();
-        obj.playMusic();
-
+        A obj=new A();
+        obj.show();
+        A.B b = new A.B();
+        b.config();
     }
 
 }
