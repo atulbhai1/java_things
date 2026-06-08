@@ -1,14 +1,6 @@
 class A{
-    int age;
-
     public void show(){
-        System.out.println("Showing");
-    }
-
-    static class B{
-        public void config(){
-            System.out.println("in config");
-        }
+        System.out.println("in A show");
     }
 }
 
@@ -16,10 +8,13 @@ class A{
 public class main {
     public static void main(String a[])
     {
-        A obj=new A();
+        A obj = new A()
+        {
+            public void show(){
+                System.out.println("in nAw show");
+            }
+        };
         obj.show();
-        A.B b = new A.B();
-        b.config();
     }
 
 }
