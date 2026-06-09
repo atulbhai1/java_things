@@ -1,21 +1,12 @@
-interface A{
-    void show();
-    void config();
+enum Status{
+    Running, Failed, Pending, Success;
 }
-class B implements A{
-    public void show(){
-        System.out.println("B show");
-    }
-    public void config(){
-        System.out.println("B config");
-    }
-}
-
 public class main {
     public static void main(String a[])
     {
-        A obj;
-        obj = new B();
+        Status s = Status.Running;
+        s.ordinal();
+        Status[] values = Status.values();
     }
 
 }
