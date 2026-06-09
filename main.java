@@ -1,17 +1,21 @@
-abstract class A{
-    public abstract void show();
+interface A{
+    void show();
+    void config();
 }
-
+class B implements A{
+    public void show(){
+        System.out.println("B show");
+    }
+    public void config(){
+        System.out.println("B config");
+    }
+}
 
 public class main {
     public static void main(String a[])
     {
-        A obj = new A(){
-            public void show(){
-                System.out.println("in B show");
-            }
-        };
-        obj.show();
+        A obj;
+        obj = new B();
     }
 
 }
