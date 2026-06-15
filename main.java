@@ -1,27 +1,20 @@
-public class main {
-    public static void main(String a[])
-    {
-        int i = 0;
-        int j = 0;
-        int nums[] = new int[5];
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
-        try
-        {
-            j = 8 / i;
-            System.out.println(nums[1]);
-            System.out.println(nums[5]);
-        }
-        catch(ArithmeticException e){
-            System.out.println("Problem Found: "+e);
-        }
-        catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Problem Found: "+e);
-        }
-        catch(Exception e){
-            System.out.println("Problem Found: "+e);
-        }
-        System.out.println("The value of j is: "+j);
-        System.out.println("Bye");
+
+public class main {
+    public static void main(String a[]) throws IOException
+    {
+
+        //InputStreamReader in = new InputStreamReader(System.in);
+        //BufferedReader bf = new BufferedReader(in);
+        Scanner sc = new Scanner(System.in);
+        //System.out.println(Integer.parseInt(bf.readLine()));
+        System.out.println(sc.nextInt());
+        //bf.close();
+        sc.close();
     }
 
 }
