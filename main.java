@@ -1,18 +1,28 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+class A extends Thread{
+    public void run(){
+        for (int i=1;i<=10;i++)
+        {
+        System.out.println("hi");
+        }
+    }
+}
+
+class B extends Thread{
+    public void run(){
+        for (int i=1;i<=10;i++)
+        {
+            System.out.println("hello");
+        }
+    }
+}
 
 public class main {
-    public static void main(String a[]) throws IOException
+    public static void main(String a[])
     {
-        int num = 0;
-        //BufferedReader br = null;
-        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in));)
-        {
-            //br = new BufferedReader(new InputStreamReader(System.in));
-            num = Integer.parseInt(br.readLine());
-        }
-
+        A obj1 =  new A();
+        B obj2 = new B();
+        obj1.start();
+        obj2.start();
     }
 
 }
