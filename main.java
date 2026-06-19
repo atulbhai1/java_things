@@ -1,32 +1,21 @@
-class Counter{
-    int count;
-    public synchronized void increment(){
-        count++;
-    }
-}
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class main {
     public static void main(String a[]) throws InterruptedException {
-        Counter c = new Counter();
-        Runnable obj1 =  () -> {
-                for (int i=1;i<=10000;i++)
-                {
-                    c.increment();
-                }
-            };
-        Runnable obj2 = () -> {
-                for (int i=1;i<=10000;i++)
-                {
-                    c.increment();
-                }
-            };
-        Thread t1 = new Thread(obj1);
-        Thread t2 = new Thread(obj2);
-        t1.start();
-        t2.start();
-        t1.join();
-        t2.join();
-        System.out.println(c.count);
+        List<Integer> nums = new ArrayList<Integer>();
+        nums.add(6);
+        nums.add(8);
+        nums.add(3);
+        nums.add(2);
+
+
+        System.out.println(nums.indexOf(8));
+
+        for (int n : nums){
+            System.out.println(n);
+        }
     }
 
 }
