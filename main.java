@@ -1,20 +1,23 @@
-import java.util.HashMap;
-import java.util.Map;
-
-
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class main {
     public static void main(String a[]) {
-        Map<String, Integer> Students = new HashMap<String, Integer>();
-        Students.put("Navin", 56);
-        Students.put("Harsh", 23);
-        Students.put("Sushil", 67);
-        Students.put("Kiran", 92);
-        for (String student: Students.keySet()) {
-            if (Students.get(student) < 70){
-                System.out.println(student+" has failed.");
+        Comparator<Integer> com = new Comparator<Integer>() {
+            public int compare(Integer o1, Integer o2) {
+                return ((Integer) (o1%10)).compareTo(o2%10);
             }
-        }
+        };
+        List<Integer> list = new ArrayList<>();
+        list.add(12);
+        list.add(51);
+        list.add(83);
+        list.add(24);
+        list.add(65);
+        Collections.sort(list, com);
+        System.out.println(list);
     }
 
 }
