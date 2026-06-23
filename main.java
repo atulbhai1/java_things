@@ -1,23 +1,19 @@
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class main {
     public static void main(String a[]) {
-        Comparator<Integer> com = new Comparator<Integer>() {
-            public int compare(Integer o1, Integer o2) {
-                return ((Integer) (o1%10)).compareTo(o2%10);
+        List<Integer> nums = Arrays.asList(7, 5, 75, 2, 9);
+        //Stream<Integer> stream = nums.stream();
+        int sum = 0;
+        for (int i=0;i<nums.size();i++){
+            if (nums.get(i)%2==0) {
+                sum += 2*(nums.get(i));
             }
-        };
-        List<Integer> list = new ArrayList<>();
-        list.add(12);
-        list.add(51);
-        list.add(83);
-        list.add(24);
-        list.add(65);
-        Collections.sort(list, com);
-        System.out.println(list);
+        }
+        nums.forEach(n -> System.out.println(n));
     }
 
 }
