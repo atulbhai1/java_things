@@ -7,9 +7,15 @@ public class  main{
 
         Connection con = DriverManager.getConnection("jdbc:postgresql:demo","postgres","16042010");
         System.out.println("Connected to database successfully");
-        Statement st = con.createStatement();
-        boolean status = st.execute("insert into student values (11, 34, 'Jane')");
-        System.out.println("Status:"+status);
+        String sql = "insert into student values (?, ?, ?)";
+        PreparedStatement st = con.prepareStatement(sql);
+        st.setInt(1, 12);
+        st.setInt(2, 35);
+        st.setString(3, "Jack");
+        st.execute();
+
+
+
 
 
         con.close();
