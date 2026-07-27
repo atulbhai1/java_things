@@ -8,14 +8,8 @@ public class  main{
         Connection con = DriverManager.getConnection("jdbc:postgresql:demo","postgres","16042010");
         System.out.println("Connected to database successfully");
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("select * from student");
-        while (rs.next()) {
-            String name = rs.getString("sname");
-            int id = rs.getInt("sid");
-            int marks = rs.getInt("marks");
-            System.out.println(id+" : "+name+" : "+marks);
-        }
-
+        boolean status = st.execute("insert into student values (11, 34, 'Jane')");
+        System.out.println("Status:"+status);
 
 
         con.close();
